@@ -4,6 +4,7 @@ pub mod beerSong;
 pub mod differenceOfSquares;
 pub mod matchingBrackets;
 pub mod primeFactors;
+pub mod proverb;
 pub mod series;
 pub mod sumOfMultiples;
 
@@ -13,6 +14,7 @@ use beerSong::sing;
 use differenceOfSquares::{square_of_sum, sum_of_squares};
 use matchingBrackets::brackets_are_balanced;
 use primeFactors::factors;
+use proverb::build_proverb;
 use series::series;
 use sumOfMultiples::sum_of_multiples;
 
@@ -37,6 +39,9 @@ fn main() {
     println!("{:?}", brackets_are_balanced(")()"));
 
     println!("{:?}", sum_of_multiples(4, &[3, 0]));
+
+    let input = vec!["nail", "shoe"];
+    println!("{:?}", build_proverb(&input));
 
     // let s: &str = "Hello world!".as_ref();
     // let char_vec: Vec<char> = s.chars().collect();
