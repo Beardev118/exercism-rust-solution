@@ -2,6 +2,7 @@ pub mod amstrongNumbers;
 pub mod anagram;
 pub mod beerSong;
 pub mod differenceOfSquares;
+pub mod matchingBrackets;
 pub mod primeFactors;
 pub mod series;
 
@@ -9,6 +10,7 @@ use amstrongNumbers::is_armstrong_number;
 use anagram::anagrams_for;
 use beerSong::sing;
 use differenceOfSquares::{square_of_sum, sum_of_squares};
+use matchingBrackets::brackets_are_balanced;
 use primeFactors::factors;
 use series::series;
 
@@ -29,6 +31,8 @@ fn main() {
     println!("{:?}", sum_of_squares(10));
 
     println!("{:?}", factors(901255));
+
+    println!("{:?}", brackets_are_balanced(")()"));
 
     // let s: &str = "Hello world!".as_ref();
     // let char_vec: Vec<char> = s.chars().collect();
