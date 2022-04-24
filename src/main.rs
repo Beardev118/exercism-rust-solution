@@ -1,6 +1,7 @@
 pub mod amstrongNumbers;
 pub mod anagram;
 pub mod beerSong;
+pub mod binarySearch;
 pub mod differenceOfSquares;
 pub mod matchingBrackets;
 pub mod pangram;
@@ -12,6 +13,7 @@ pub mod sumOfMultiples;
 use amstrongNumbers::is_armstrong_number;
 use anagram::anagrams_for;
 use beerSong::sing;
+use binarySearch::find;
 use differenceOfSquares::{square_of_sum, sum_of_squares};
 use matchingBrackets::brackets_are_balanced;
 use pangram::is_pangram;
@@ -49,6 +51,8 @@ fn main() {
         "{:?}",
         is_pangram("the quick brown fox jumps over the lazy dog")
     );
+
+    println!("{:?}", find(&[1, 3, 4, 6, 8, 9, 11], 1));
 
     // let s: &str = "Hello world!".as_ref();
     // let char_vec: Vec<char> = s.chars().collect();
