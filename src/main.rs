@@ -3,6 +3,7 @@ pub mod anagram;
 pub mod beerSong;
 pub mod differenceOfSquares;
 pub mod matchingBrackets;
+pub mod pangram;
 pub mod primeFactors;
 pub mod proverb;
 pub mod series;
@@ -13,6 +14,7 @@ use anagram::anagrams_for;
 use beerSong::sing;
 use differenceOfSquares::{square_of_sum, sum_of_squares};
 use matchingBrackets::brackets_are_balanced;
+use pangram::is_pangram;
 use primeFactors::factors;
 use proverb::build_proverb;
 use series::series;
@@ -42,6 +44,11 @@ fn main() {
 
     let input = vec!["nail", "shoe"];
     println!("{:?}", build_proverb(&input));
+
+    println!(
+        "{:?}",
+        is_pangram("the quick brown fox jumps over the lazy dog")
+    );
 
     // let s: &str = "Hello world!".as_ref();
     // let char_vec: Vec<char> = s.chars().collect();
