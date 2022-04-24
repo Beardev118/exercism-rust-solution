@@ -1,3 +1,4 @@
+pub mod allYourBase;
 pub mod amstrongNumbers;
 pub mod anagram;
 pub mod beerSong;
@@ -10,6 +11,7 @@ pub mod proverb;
 pub mod series;
 pub mod sumOfMultiples;
 
+use allYourBase::convert;
 use amstrongNumbers::is_armstrong_number;
 use anagram::anagrams_for;
 use beerSong::sing;
@@ -52,7 +54,12 @@ fn main() {
         is_pangram("the quick brown fox jumps over the lazy dog")
     );
 
-    println!("{:?}", find(&[1, 3, 4, 6, 8, 9, 11], 1));
+    println!("{:?}", find(&[1, 3, 4, 6, 8, 9, 11], 13));
+
+    let input_base = 10;
+    let input_digits = &[4, 2];
+    let output_base = 2;
+    convert(input_digits, input_base, output_base);
 
     // let s: &str = "Hello world!".as_ref();
     // let char_vec: Vec<char> = s.chars().collect();
