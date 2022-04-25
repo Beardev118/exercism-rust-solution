@@ -1,4 +1,5 @@
 pub mod allYourBase;
+pub mod alphametics;
 pub mod amstrongNumbers;
 pub mod anagram;
 pub mod beerSong;
@@ -12,6 +13,7 @@ pub mod series;
 pub mod sumOfMultiples;
 
 use allYourBase::convert;
+use alphametics::solve;
 use amstrongNumbers::is_armstrong_number;
 use anagram::anagrams_for;
 use beerSong::sing;
@@ -60,6 +62,8 @@ fn main() {
     let input_digits = &[4, 2];
     let output_base = 2;
     convert(input_digits, input_base, output_base);
+
+    solve("AND + A + STRONG + OFFENSE + AS + A + GOOD == DEFENSE");
 
     // let s: &str = "Hello world!".as_ref();
     // let char_vec: Vec<char> = s.chars().collect();
