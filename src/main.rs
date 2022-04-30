@@ -5,6 +5,7 @@ pub mod anagram;
 pub mod beerSong;
 pub mod binarySearch;
 pub mod differenceOfSquares;
+pub mod hamming;
 pub mod matchingBrackets;
 pub mod pangram;
 pub mod primeFactors;
@@ -19,6 +20,7 @@ use anagram::anagrams_for;
 use beerSong::sing;
 use binarySearch::find;
 use differenceOfSquares::{square_of_sum, sum_of_squares};
+use hamming::hamming_distance;
 use matchingBrackets::brackets_are_balanced;
 use pangram::is_pangram;
 use primeFactors::factors;
@@ -64,6 +66,8 @@ fn main() {
     convert(input_digits, input_base, output_base);
 
     solve("AND + A + STRONG + OFFENSE + AS + A + GOOD == DEFENSE");
+
+    println!("{:?}", hamming_distance("ACCTG", "CCTGA"));
 
     // let s: &str = "Hello world!".as_ref();
     // let char_vec: Vec<char> = s.chars().collect();
