@@ -7,6 +7,7 @@ pub mod binarySearch;
 pub mod differenceOfSquares;
 pub mod hamming;
 pub mod matchingBrackets;
+pub mod minesweeper;
 pub mod pangram;
 pub mod primeFactors;
 pub mod proverb;
@@ -22,6 +23,7 @@ use binarySearch::find;
 use differenceOfSquares::{square_of_sum, sum_of_squares};
 use hamming::hamming_distance;
 use matchingBrackets::brackets_are_balanced;
+use minesweeper::annotate;
 use pangram::is_pangram;
 use primeFactors::factors;
 use proverb::build_proverb;
@@ -33,41 +35,43 @@ fn main() {
 
     // println!("{:?}", sing(3, 0));
 
-    let word = "start";
-    let anagrams: [&str; 2] = ["aar", "tstar"];
-    println!("{:?}", series("92017", 2));
+    // let word = "start";
+    // let anagrams: [&str; 2] = ["aar", "tstar"];
+    // println!("{:?}", series("92017", 2));
 
-    println!("{:?}", is_armstrong_number(153));
+    // println!("{:?}", is_armstrong_number(153));
 
-    println!("{:?}", anagrams_for(word, &anagrams));
+    // println!("{:?}", anagrams_for(word, &anagrams));
 
-    println!("{:?}", square_of_sum(10));
-    println!("{:?}", sum_of_squares(10));
+    // println!("{:?}", square_of_sum(10));
+    // println!("{:?}", sum_of_squares(10));
 
-    println!("{:?}", factors(901255));
+    // println!("{:?}", factors(901255));
 
-    println!("{:?}", brackets_are_balanced(")()"));
+    // println!("{:?}", brackets_are_balanced(")()"));
 
-    println!("{:?}", sum_of_multiples(4, &[3, 0]));
+    // println!("{:?}", sum_of_multiples(4, &[3, 0]));
 
-    let input = vec!["nail", "shoe"];
-    println!("{:?}", build_proverb(&input));
+    // let input = vec!["nail", "shoe"];
+    // println!("{:?}", build_proverb(&input));
 
-    println!(
-        "{:?}",
-        is_pangram("the quick brown fox jumps over the lazy dog")
-    );
+    // println!(
+    //     "{:?}",
+    //     is_pangram("the quick brown fox jumps over the lazy dog")
+    // );
 
-    println!("{:?}", find(&[1, 3, 4, 6, 8, 9, 11], 13));
+    // println!("{:?}", find(&[1, 3, 4, 6, 8, 9, 11], 13));
 
-    let input_base = 10;
-    let input_digits = &[4, 2];
-    let output_base = 2;
-    convert(input_digits, input_base, output_base);
+    // let input_base = 10;
+    // let input_digits = &[4, 2];
+    // let output_base = 2;
+    // convert(input_digits, input_base, output_base);
 
-    solve("AND + A + STRONG + OFFENSE + AS + A + GOOD == DEFENSE");
+    // solve("AND + A + STRONG + OFFENSE + AS + A + GOOD == DEFENSE");
 
-    println!("{:?}", hamming_distance("ACCTG", "CCTGA"));
+    // println!("{:?}", hamming_distance("ACCTG", "CCTGA"));
+
+    println!("{:?}", annotate(&[]))
 
     // let s: &str = "Hello world!".as_ref();
     // let char_vec: Vec<char> = s.chars().collect();
