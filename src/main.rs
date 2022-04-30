@@ -11,6 +11,7 @@ pub mod minesweeper;
 pub mod pangram;
 pub mod primeFactors;
 pub mod proverb;
+pub mod saddlePoints;
 pub mod series;
 pub mod sumOfMultiples;
 
@@ -27,6 +28,7 @@ use minesweeper::annotate;
 use pangram::is_pangram;
 use primeFactors::factors;
 use proverb::build_proverb;
+use saddlePoints::find_saddle_points;
 use series::series;
 use sumOfMultiples::sum_of_multiples;
 
@@ -71,7 +73,10 @@ fn main() {
 
     // println!("{:?}", hamming_distance("ACCTG", "CCTGA"));
 
-    println!("{:?}", annotate(&[]))
+    println!("{:?}", annotate(&[]));
+
+    let input = vec![vec![], vec![], vec![]];
+    println!("{:?}", find_saddle_points(&input));
 
     // let s: &str = "Hello world!".as_ref();
     // let char_vec: Vec<char> = s.chars().collect();
