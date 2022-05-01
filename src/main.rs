@@ -13,6 +13,7 @@ pub mod primeFactors;
 pub mod proverb;
 pub mod saddlePoints;
 pub mod series;
+pub mod simpleCipher;
 pub mod sumOfMultiples;
 
 use allYourBase::convert;
@@ -30,6 +31,7 @@ use primeFactors::factors;
 use proverb::build_proverb;
 use saddlePoints::find_saddle_points;
 use series::series;
+use simpleCipher::{decode, encode, encode_random};
 use sumOfMultiples::sum_of_multiples;
 
 fn main() {
@@ -77,6 +79,13 @@ fn main() {
 
     let input = vec![vec![], vec![], vec![]];
     println!("{:?}", find_saddle_points(&input));
+
+    const KEY: &str = "abcdefghij";
+    const PLAIN_TEXT: &str = "thisismysecret";
+    println!("{:?}", encode(KEY, "aaaaaaaaaa"));
+    let (k, encoded) = encode_random(PLAIN_TEXT);
+    println!("{:?}", decode(KEY, &encode(KEY, PLAIN_TEXT).unwrap()));
+    assert_eq!(decode(&k, &encoded), Some(PLAIN_TEXT.to_string()));
 
     // let s: &str = "Hello world!".as_ref();
     // let char_vec: Vec<char> = s.chars().collect();
