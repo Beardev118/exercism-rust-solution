@@ -5,6 +5,7 @@ pub mod anagram;
 pub mod beerSong;
 pub mod binarySearch;
 pub mod differenceOfSquares;
+pub mod diffieHellman;
 pub mod hamming;
 pub mod matchingBrackets;
 pub mod minesweeper;
@@ -16,13 +17,13 @@ pub mod series;
 pub mod simpleCipher;
 pub mod sumOfMultiples;
 
-use allYourBase::convert;
 use alphametics::solve;
 use amstrongNumbers::is_armstrong_number;
 use anagram::anagrams_for;
 use beerSong::sing;
 use binarySearch::find;
 use differenceOfSquares::{square_of_sum, sum_of_squares};
+use diffieHellman::{private_key, public_key, secret};
 use hamming::hamming_distance;
 use matchingBrackets::brackets_are_balanced;
 use minesweeper::annotate;
@@ -86,6 +87,13 @@ fn main() {
     let (k, encoded) = encode_random(PLAIN_TEXT);
     println!("{:?}", decode(KEY, &encode(KEY, PLAIN_TEXT).unwrap()));
     assert_eq!(decode(&k, &encoded), Some(PLAIN_TEXT.to_string()));
+
+    let p: u64 = 4_294_967_299;
+    let g: u64 = 8;
+    let private_key: u64 = 4_294_967_296;
+    let expected: u64 = 4096;
+    assert_eq!(public_key(p, g, private_key), expected);
+    println!("{:?}", public_key(p, g, private_key));
 
     // let s: &str = "Hello world!".as_ref();
     // let char_vec: Vec<char> = s.chars().collect();
