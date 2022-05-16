@@ -13,6 +13,7 @@ pub mod pangram;
 pub mod primeFactors;
 pub mod proverb;
 pub mod saddlePoints;
+pub mod scrabbleScore;
 pub mod series;
 pub mod simpleCipher;
 pub mod sumOfMultiples;
@@ -31,6 +32,7 @@ use pangram::is_pangram;
 use primeFactors::factors;
 use proverb::build_proverb;
 use saddlePoints::find_saddle_points;
+use scrabbleScore::score;
 use series::series;
 use simpleCipher::{decode, encode, encode_random};
 use sumOfMultiples::sum_of_multiples;
@@ -94,6 +96,8 @@ fn main() {
     let expected: u64 = 4096;
     assert_eq!(public_key(p, g, private_key), expected);
     println!("{:?}", public_key(p, g, private_key));
+
+    println!("{:?}", score("f"));
 
     // let s: &str = "Hello world!".as_ref();
     // let char_vec: Vec<char> = s.chars().collect();
