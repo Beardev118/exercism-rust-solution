@@ -83,12 +83,12 @@ fn main() {
     let input = vec![vec![], vec![], vec![]];
     println!("{:?}", find_saddle_points(&input));
 
-    const KEY: &str = "abcdefghij";
-    const PLAIN_TEXT: &str = "thisismysecret";
-    println!("{:?}", encode(KEY, "aaaaaaaaaa"));
-    let (k, encoded) = encode_random(PLAIN_TEXT);
-    println!("{:?}", decode(KEY, &encode(KEY, PLAIN_TEXT).unwrap()));
-    assert_eq!(decode(&k, &encoded), Some(PLAIN_TEXT.to_string()));
+    // const KEY: &str = "abcdefghij";
+    // const PLAIN_TEXT: &str = "thisismysecret";
+    // println!("{:?}", encode(KEY, "aaaaaaaaaa"));
+    // let (k, encoded) = encode_random(PLAIN_TEXT);
+    // println!("{:?}", decode(KEY, &encode(KEY, PLAIN_TEXT).unwrap()));
+    // assert_eq!(decode(&k, &encoded), Some(PLAIN_TEXT.to_string()));
 
     let p: u64 = 4_294_967_299;
     let g: u64 = 8;
