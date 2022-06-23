@@ -1,8 +1,9 @@
-pub mod pascalsTriangle;
+pub mod perfectNumbers;
+use perfectNumbers::classify;
 
 fn main() {
     println!("Hello, world!");
 
-    let pt = pascalsTriangle::PascalsTriangle::new(15);
-    println!("{:?}", pt.rows());
+    let pt = classify(10000000);
+    println!("{:?}", pt);
 }
