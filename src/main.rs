@@ -1,8 +1,11 @@
-pub mod variableLengthQuantity;
-use variableLengthQuantity::*;
+pub mod affineCipher;
+use affineCipher::*;
 
 fn main() {
     println!("Hello, world!");
 
-    assert_eq!(&[0x40, 0x7f], to_bytes(&[0x40, 0x7f]).as_slice());
+    assert_eq!(
+        decode("odpoz ub123 odpoz ub", 25, 7).unwrap(),
+        "testing123testing"
+    )
 }
