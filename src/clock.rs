@@ -1,10 +1,12 @@
 use std::fmt;
 const DAY: i64 = 24 * 60;
 const HOUR: i64 = 60;
+
 #[derive(Debug, Eq, PartialEq)]
 pub struct Clock {
     minutes: i64,
 }
+
 impl Clock {
     pub fn new(hours: i64, minutes: i64) -> Clock {
         Clock {
